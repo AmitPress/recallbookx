@@ -1,0 +1,5 @@
+[project]
+name = RecallBook
+
+[servers.ghpages]
+target = ghpages+https://amitpress/recallbookv2
