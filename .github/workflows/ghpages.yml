@@ -7,13 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Installing python
-      - run: |
-        apt update
-        apt install python3
-        apt install python3-pip
-        pip3 install lektor
+       uses: actions/checkout@v2
+       uses: actions/setup-python@v2
+        with:
+          python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+          cache: pip
+        run: pip install lektor
       - name: Building
-      - run: lektor build -O public
+        run: lektor build -O public
   deploy_lektor:
     uses: build_lektor
     steps:
