@@ -15,7 +15,7 @@ jobs:
       - name: Install Lektor
         run: |
           python -m pip install --upgrade pip setuptools
-          python -m pip install lektor:
+          python -m pip install lektor
       - run: lektor build
       - run: lektor deploy ghpages-https
         if: env.DEPLOY == 'true'
