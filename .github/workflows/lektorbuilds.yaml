@@ -1,4 +1,4 @@
-name: LektorBuildup
+name: LektorBuilds
 on:
   push:
     branches: ["master"]
