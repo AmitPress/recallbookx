@@ -9,6 +9,9 @@ jobs:
   deployrecallbook:
     name: DeployRecallbook
     runs-on: ubuntu-latest
+    env:
+      LEKTOR_DEPLOY_USERNAME: lektor
+      LEKTOR_DEPLOY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
@@ -18,10 +21,6 @@ jobs:
           python -m pip install lektor
       - run: lektor build
       - run: lektor deploy ghpages-https
-        if: env.DEPLOY == 'true'
-        env:
-          LEKTOR_DEPLOY_USERNAME: lektor
-          LEKTOR_DEPLOY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
 
       
 
