@@ -6,15 +6,14 @@ jobs:
   build_lektor:
     runs-on: ubuntu-latest
     steps:
-      - name: Build
-       uses: actions/checkout@v2
-       uses: actions/setup-python@v2
-        with:
-          python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
-          cache: pip
-        run: |
-          pip install lektor
-          lektor build -O public
+      uses: actions/checkout@v2
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+        cache: pip
+      run: |
+        pip install lektor
+        lektor build -O public
   deploy_lektor:
     uses: build_lektor
     steps:
