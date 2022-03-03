@@ -13,9 +13,8 @@ jobs:
           cache: pip
       - run: pip install lektor
       - run: lektor build -O public
-      
+
   deploy_lektor:
-    uses: build_lektor
     steps:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
