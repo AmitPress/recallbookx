@@ -3,7 +3,7 @@ name: RecallBookDeploy
 on:
   push:
     branches:
-    - 'master'
+    - 'main'
 
 jobs:
   deployrecallbook:
