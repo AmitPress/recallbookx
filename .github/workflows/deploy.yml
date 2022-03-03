@@ -20,8 +20,8 @@ jobs:
       - run: lektor deploy ghpages-https
         if: env.DEPLOY == 'true'
         env:
-        LEKTOR_DEPLOY_USERNAME: lektor
-        LEKTOR_DEPLOY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+          LEKTOR_DEPLOY_USERNAME: lektor
+          LEKTOR_DEPLOY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
 
       
 
