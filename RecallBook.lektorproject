@@ -4,4 +4,4 @@ name = RecallBook
 [servers.ghpages-https]
 enabled = yes
 name = Github pages on repo
-target = ghpages+https://lektor/lektor-website
+target = ghpages+https://amitpress/recallbookx
